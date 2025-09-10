@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+        animation: {
+          'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+          'fade-in': 'fadeIn 0.6s ease-out forwards',
+          'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+        },
+        keyframes: {
+          fadeInUp: {
+            '0%': {
+              opacity: '0',
+              transform: 'translate3d(0, 40px, 0)',
+            },
+            '100%': {
+              opacity: '1',
+              transform: 'translate3d(0, 0, 0)',
+            },
+          },
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          slideInLeft: {
+            '0%': {
+              opacity: '0',
+              transform: 'translate3d(-40px, 0, 0)',
+            },
+            '100%': {
+              opacity: '1',
+              transform: 'translate3d(0, 0, 0)',
+            },
+          },
+        },
+      },
+    },
+  }
+</script>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Abhishek Kusalkar - Full Stack Developer Portfolio. Expert in .NET, ReactJS, AWS, and cloud solutions."
+    />
+    <meta name="keywords" content="Abhishek Kusalkar, Full Stack Developer, .NET, ReactJS, AWS, Portfolio, Web Developer">
+    <meta name="author" content="Abhishek Kusalkar">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Abhishek Kusalkar - Full Stack Developer">
+    <meta property="og:description" content="Passionate about building scalable web applications and cloud solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abhishek Kusalkar - Full Stack Developer">
+    <meta name="twitter:description" content="Passionate about building scalable web applications and cloud solutions">
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>Abhishek Kusalkar - Full Stack Developer</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Loading Screen -->
+    <div id="loading">
+      <div style="text-align: center;">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading Portfolio...</div>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading screen when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(() => loading.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
