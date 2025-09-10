@@ -1,7 +1,6 @@
 {
   "name": "abhishek-portfolio",
   "version": "1.0.0",
-
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -42,6 +41,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "sitemap": "^8.0.0"
   }
 }
