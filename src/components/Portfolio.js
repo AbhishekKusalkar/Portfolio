@@ -192,26 +192,29 @@ const Portfolio = () => {
           </div>
           
           {/* Mobile Navigation */}
-          <div id="mobile-nav" className="hidden md:hidden bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {['home', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => {
-                    scrollToSection(section);
-                    document.getElementById('mobile-nav').classList.add('hidden');
-                  }}
-                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium capitalize ${
-                    activeSection === section 
-                      ? 'text-blue-600 bg-blue-50' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
-            </div>
-          </div>
+          <div
+  id="mobile-nav"
+  className="hidden md:hidden absolute top-16 left-0 w-full bg-white border-t z-50 shadow-lg"
+>
+  <div className="px-2 pt-2 pb-3 space-y-1">
+    {['home', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map((section) => (
+      <button
+        key={section}
+        onClick={() => {
+          scrollToSection(section);
+          document.getElementById('mobile-nav').classList.add('hidden');
+        }}
+        className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium capitalize ${
+          activeSection === section
+            ? 'text-blue-600 bg-blue-50'
+            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        }`}
+      >
+        {section}
+      </button>
+    ))}
+  </div>
+</div>
         </div>
       </nav>
 
