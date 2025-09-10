@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github,Instagram, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Database, Cloud, Palette, Award, BookOpen, User, Briefcase, FolderOpen, MessageCircle, ChevronRight, Star, Calendar, Globe } from 'lucide-react';
+import { Github,Instagram, Linkedin, Mail, Download, Phone, MapPin, ExternalLink, Code, Database, Cloud, Palette, Award, BookOpen, User, Briefcase, FolderOpen, MessageCircle, ChevronRight, Star, Calendar, Globe } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -248,6 +248,14 @@ const Portfolio = () => {
               <Instagram className="w-5 h-5" />
               <span>Instagram</span>
             </a>
+            <a
+                href="/resume.pdf"
+                download
+                className="flex items-center gap-2 bg-green-600 text-white rounded-full px-6 py-3 hover:bg-green-700 transition-all duration-300 hover:-translate-y-1"
+              >
+                <Download className="w-5 h-5" />
+                <span>Download Resume</span>
+              </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
