@@ -174,8 +174,6 @@ const Portfolio = () => {
                 </button>
               ))}
             </div>
-            
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <button 
                 onClick={() => {
@@ -190,11 +188,13 @@ const Portfolio = () => {
               </button>
             </div>
           </div>
-          
-          {/* Mobile Navigation */}
-          <div
+        </div>
+      </nav>
+
+      {/* Move mobile nav OUTSIDE nav and flex container */}
+      <div
   id="mobile-nav"
-  className="hidden md:hidden absolute top-16 left-0 w-full bg-white border-t z-50 shadow-lg"
+  className="hidden md:hidden fixed top-16 left-0 w-full bg-white border-t z-[100] shadow-lg"
 >
   <div className="px-2 pt-2 pb-3 space-y-1">
     {['home', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map((section) => (
@@ -215,8 +215,6 @@ const Portfolio = () => {
     ))}
   </div>
 </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section id="home" className={`min-h-screen flex items-center justify-center px-4 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
