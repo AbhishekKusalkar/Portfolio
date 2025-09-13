@@ -58,7 +58,7 @@ const Portfolio = () => {
       tech: ['ReactJS', 'CSS', 'Animation Libraries'],
       features: ['Dijkstra Algorithm', 'Interactive Grid', 'Real-time Visualization'],
       status: 'Live',
-      demoLink: 'https://vercel.com/abhishek-kusalkars-projects/path-finding-algorithms',
+      demoLink: 'https://path-finding-algorithms-ten.vercel.app/',
       githubLink: 'https://github.com/AbhishekKusalkar/path-finding-algorithms', 
       image: 'https://i.postimg.cc/fLDSkJS4/Screenshot-2025-09-08-143614.png'
     },
